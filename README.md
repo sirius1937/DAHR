@@ -2,4 +2,4 @@
 
 
 
-
+<img src="./resource/main_figure.png" alt="main_fig" style="zoom:67%;" />
