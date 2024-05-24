@@ -297,7 +297,7 @@ if __name__ == '__main__':
     parser.add_argument('--save_log_path',type=str,default='./default.log')
 
     parser.add_argument('--prompt_method',type=str,default='base')
-    parser.add_argument('--replay_method',type=str,default='DAHR-md')
+    parser.add_argument('--replay_method',type=str,default='DAHR_md')
 
     parser.add_argument('--random_seed',type=int,default=1234)
     parser.add_argument('--default_times',type=int,default=1)

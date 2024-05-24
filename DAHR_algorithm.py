@@ -45,8 +45,9 @@ def sample(questions, all_embedding_np, pc=0.02, cluster_se="rd", branch=2, clus
     if len(questions) == 0:
         return ret, dep
     if len(questions) < cluster_size:
-        count = max(1, min(int(len(questions) * pc), len(questions)))
-        # count = max(1, min(int(len(questions) * pc) + 1, len(questions)))
+        # count = max(1, min(int(len(questions) * pc), len(questions)))
+        count = max(1, min(int(len(questions) * pc) + 1, len(questions)))
+        
         iddd = np.array(random.sample(range(len(questions)), count))
         if cluster_se == "md":
             iddd = min_pos(all_embedding_np, count)
@@ -103,7 +104,10 @@ def sample_function(datasets, percent = 0.02, cluster_se = "rd",branch = 2, clus
     while len(sample_results) < real_count :
         sample_results = numpy.concatenate((sample_results, r_questions))
         sample_results_depths = numpy.concatenate((sample_results_depths, r_depths))
-    iddd = numpy.array(random.sample([i for i in range(len(sample_results))],real_count))
+    # iddd = numpy.array(random.sample([i for i in range(len(sample_results))],real_count))
+
+    iddd = np.argsort(sample_results_depths)[-real_count:] 
+
     r_questions, r_depths = sample_results[iddd], sample_results_depths[iddd]
 
     indexs = []
