@@ -1,4 +1,4 @@
-# DAHR: Depth Aware Hierarchical Replay For Continual Knowledge Based Question Answering (COLING 2024)
+# DAHR: Depth Aware Hierarchical Replay Continual Learning for  Knowledge Based Question Answering (COLING 2024)
 
 
 
